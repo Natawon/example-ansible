@@ -1,0 +1,8 @@
+---
+- name: Simple echo test
+  hosts: example-target
+
+  tasks:
+    - name: Testing echo
+      debug:
+        msg: Hello World
