@@ -1,7 +1,5 @@
-FROM docker.io/alpine:3
+FROM docker.io/rockylinux/rockylinux:8.4
 
-RUN apk add \
-    python3 \
-    py3-pip \
-    sshpass \
-&& python -m pip install ansible
+RUN dnf update -y \
+&& dnf install epel-release -y \
+&& dnf install ansible -y
