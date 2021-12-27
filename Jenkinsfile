@@ -10,13 +10,17 @@ pipeline {
 
         stage ('echo'){
 
-            ansiColor('xterm') {
-                ansiblePlaybook( 
-                    playbook: './playbook.yaml',
-                    inventory: './hosts', 
-                    credentialsId: 'sample-ssh-key',
-                    colorized: true
-                ) 
+            steps {
+
+                ansiColor('xterm') {
+                    ansiblePlaybook( 
+                        playbook: './playbook.yaml',
+                        inventory: './hosts', 
+                        credentialsId: 'sample-ssh-key',
+                        colorized: true
+                    ) 
+                }
+
             }
 
         }
