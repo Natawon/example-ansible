@@ -1,6 +1,9 @@
 FROM docker.io/alpine:3
 
-RUN apk add ansible \
-&& apk add sshpass
+RUN apk add \
+    python3 \
+    py3-pip \
+    sshpass \
+&& python -m pip install ansible
 
 WORKDIR /root
