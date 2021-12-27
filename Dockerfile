@@ -5,5 +5,3 @@ RUN apk add \
     py3-pip \
     sshpass \
 && python -m pip install ansible
-
-WORKDIR /root
