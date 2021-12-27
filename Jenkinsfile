@@ -1,8 +1,11 @@
 pipeline {
 
     agent {
-        docker {
-            image 'ansible/ansible-runner'
+        dockerfile {
+
+            filename 'Dockerfile'
+            label 'ansible'
+
         }
     }
 
@@ -13,12 +16,16 @@ pipeline {
             steps {
 
                 ansiColor('xterm') {
+
                     ansiblePlaybook( 
+
                         playbook: './playbook.yaml',
                         inventory: './hosts', 
                         credentialsId: 'sample-ssh-key',
                         colorized: true
+
                     ) 
+
                 }
 
             }
