@@ -1,6 +1,6 @@
 ---
 - name: Simple echo test
-  hosts: example-target
+  hosts: ExampleTarget
 
   tasks:
     - name: Testing echo
