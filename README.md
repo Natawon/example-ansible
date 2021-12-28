@@ -1,17 +1,53 @@
 # jenkins-ansible
 An example of how to use Jenkins and Ansible in conjunction.
 
-In this specific case, we also will use the Docker and Docker Pipeline plugins.
-Rather than using an agent with ansible installed, we will use a container with ansible installed in it.
+There are 2 possible way to do archive this.
 
-because we use the ssh username and pasword, instead of a verified key:
+## **The easy way**
+The easy way involve running ansible directly on the worker node.
 
-    set in the config file 
-        host_key_checking = False
+The worker node requires the following packages:
 
-    install the package
-        sshpass
+- `ansible` to be able to use Ansible
+- `sshpass` to be able to login the desired machines only with credentials
 
-To test the container:
+The Jenkins server requires the following plugin:
+
+- [Ansible plugin](https://plugins.jenkins.io/ansible/)
+- [ANSI Color](https://plugins.jenkins.io/ansicolor/)
+
+The pipeline is defined in the file `Jenkinsfile`.
+
+## **The hard way**
+The hard way involve running ansible inside a container
+
+The worker node requires the following packages:
+
+- `docker` to be able to use Ansible
+
+The Jenkins server requires the following plugin:
+
+- [Ansible plugin](https://plugins.jenkins.io/ansible/)
+- [ANSI Color](https://plugins.jenkins.io/ansicolor/)
+- [Docker Plugin](https://plugins.jenkins.io/docker-plugin/)
+- [Docker Pipeline](https://plugins.jenkins.io/docker-workflow/)
+
+The pipeline is defined in the file `container.Jenkinsfile`.
+
+# Notes
+
+I tried to use the official ansible containers withouth success.
+Therefore I made one myself and it's defined in the Dockerfile.
+
+To use ansible inside the container it's necessary to be root.
+Thats the reason why the container is runned by Jenkins with the parameter `-u 0`
+
+To build the container with `podman`, use the command:
+
+    podman build -t ansible .
+
+To test the container with `podman`, use the command:
 
     podman run -it ansible /bin/sh
+
+If you prefer to use `docker`, the previous commads are still correct, simply change `podman` with `docker`.
