@@ -4,6 +4,7 @@ pipeline {
         dockerfile {
 
             filename 'Dockerfile'
+            args '-u 0'
 
         }
     }
@@ -16,7 +17,7 @@ pipeline {
 
                 ansiColor('xterm') {
 
-                    sh 'whoami'
+                    //sh 'whoami'
                     sh 'pwd'
 
                     ansiblePlaybook( 
