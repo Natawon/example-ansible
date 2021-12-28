@@ -16,6 +16,9 @@ pipeline {
 
                 ansiColor('xterm') {
 
+                    sh 'whoami'
+                    sh 'pwd'
+
                     ansiblePlaybook( 
 
                         playbook: './playbook.yaml',
