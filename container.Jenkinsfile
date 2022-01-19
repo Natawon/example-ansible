@@ -18,7 +18,7 @@ pipeline {
                 sh 'pwd'
                 sh 'ls -l'
                 sh 'cat /etc/os-release'
-                sh 'whoami'
+                sh 'mkdir ./ansible'
 
             }
 
