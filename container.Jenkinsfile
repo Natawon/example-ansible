@@ -11,13 +11,21 @@ pipeline {
 
     stages {
 
-        stage ('echo'){
+        stage ('debug'){
 
             steps {
 
                 sh 'pwd'
                 sh 'ls -l'
                 //sh 'whoami'
+
+            }
+
+        }
+
+        stage ('echo'){
+
+            steps {
 
                 ansiColor('xterm') {
 
