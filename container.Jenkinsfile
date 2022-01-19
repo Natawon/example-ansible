@@ -15,8 +15,9 @@ pipeline {
 
             steps {
 
-                sh 'whoami'
                 sh 'pwd'
+                sh 'ls -l'
+                sh 'whoami'
 
                 ansiColor('xterm') {
 
