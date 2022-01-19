@@ -15,6 +15,9 @@ pipeline {
 
             steps {
 
+                sh 'whoami'
+                sh 'pwd'
+
                 ansiColor('xterm') {
 
                     ansiblePlaybook( 
