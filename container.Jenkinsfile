@@ -4,7 +4,7 @@ pipeline {
         dockerfile {
 
             filename 'Dockerfile'
-            args '-u ansibleuser'
+            //args '-u ansibleuser'
 
         }
     }

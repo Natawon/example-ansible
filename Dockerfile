@@ -2,8 +2,8 @@ FROM docker.io/alpine:3
 
 RUN apk add ansible sshpass
 
-RUN adduser -S ansibleuser
+RUN adduser -S jenkins
 
-WORKDIR /home/ansibleuser
+WORKDIR /home/jenkins
 
-USER ansibleuser
+USER jenkins
