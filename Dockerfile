@@ -1,6 +1,6 @@
 FROM docker.io/alpine:3
 
-RUN useradd -m ansibleuser
+RUN adduser -m ansibleuser
 
 WORKDIR /home/ansibleuser
 
