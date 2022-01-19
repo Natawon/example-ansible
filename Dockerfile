@@ -1,9 +1,9 @@
 FROM docker.io/alpine:3
 
+RUN apk add ansible sshpass
+
 RUN adduser -S ansibleuser
 
 WORKDIR /home/ansibleuser
-
-RUN apk add ansible sshpass
 
 USER ansibleuser

@@ -17,7 +17,7 @@ pipeline {
 
                 sh 'pwd'
                 sh 'ls -l'
-                sh 'whoami'
+                //sh 'whoami'
 
                 ansiColor('xterm') {
 
