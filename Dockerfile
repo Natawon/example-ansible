@@ -1,6 +1,6 @@
 FROM docker.io/alpine:3
 
-RUN sudo useradd -m ansibleuser
+RUN useradd -m ansibleuser
 
 WORKDIR /home/ansibleuser
 
