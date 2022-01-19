@@ -1,6 +1,6 @@
 FROM docker.io/alpine:3
 
-RUN adduser -h ansibleuser
+RUN adduser -S ansibleuser
 
 WORKDIR /home/ansibleuser
 
