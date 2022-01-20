@@ -39,9 +39,6 @@ The pipeline is defined in the file `container.Jenkinsfile`.
 I tried to use the official ansible containers withouth success.
 Therefore I made one myself and it's defined in the Dockerfile.
 
-To use ansible inside the container it's necessary to be root.
-Thats the reason why the container is runned by Jenkins with the parameter `-u 0`
-
 To build the container with `podman`, use the command:
 
     podman build -t ansible .
