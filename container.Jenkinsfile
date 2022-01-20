@@ -36,7 +36,6 @@ pipeline {
                         inventory: './hosts', 
                         credentialsId: 'sample-ssh-key',
                         colorized: true,
-                        becomeUser: true
 
                     ) 
 
