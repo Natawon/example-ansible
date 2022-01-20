@@ -35,7 +35,8 @@ pipeline {
                         playbook: './playbook.yaml',
                         inventory: './hosts', 
                         credentialsId: 'sample-ssh-key',
-                        colorized: true
+                        colorized: true,
+                        becomeUser: true
 
                     ) 
 
