@@ -4,25 +4,11 @@ pipeline {
         dockerfile {
 
             filename 'Dockerfile'
-            //args '-u ansibleuser'
 
         }
     }
 
     stages {
-
-        stage ('debug'){
-
-            steps {
-
-                sh 'pwd'
-                sh 'ls -l'
-                sh 'cat /etc/os-release'
-                //sh 'mkdir /.ansible'
-
-            }
-
-        }
 
         stage ('echo'){
 
