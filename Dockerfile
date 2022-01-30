@@ -10,4 +10,5 @@ RUN apk add ansible sshpass
 # Tests
 RUN adduser -S ansible
 
-USER ansible
+RUN apk add openrc openssh \
+&& rc-update add sshd
