@@ -4,6 +4,7 @@ pipeline {
         dockerfile {
 
             filename 'Dockerfile'
+            args --user jenkins
 
         }
     }
@@ -24,7 +25,7 @@ pipeline {
                 }
             }
         }
-        
+
     }    
 
 }

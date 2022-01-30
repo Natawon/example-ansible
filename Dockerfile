@@ -6,3 +6,6 @@ FROM docker.io/alpine:3
 RUN mkdir -m 777 /.ansible
 
 RUN apk add ansible sshpass
+
+# Tests
+RUN adduser -S jenkins
