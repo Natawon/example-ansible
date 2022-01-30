@@ -5,12 +5,14 @@ FROM docker.io/alpine:3
 # It's necessary to create this folder whit full permission for any user 
 RUN mkdir -m 777 /.ansible
 
-RUN apk add ansible sshpass
+# sshpass is necessary if it's intended to login with username and password to the target
+RUN apk add ansible sshpass \
+&& adduser -S ansible
 
-# Tests
-RUN adduser -S ansible
-
+# Installing ssh and enabling it when the container is launched is necessary if it's required to perform local_action
 RUN apk add openrc openssh \
 && rc-update add sshd
 
-EXPOSE 22
+# This port is expose for executing local_action, but it's not exposed
+# It makes sense to expose this port only if ssh is enable for executing local_actions
+EXPOSE 22/tcp
