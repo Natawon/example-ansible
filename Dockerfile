@@ -8,4 +8,6 @@ RUN mkdir -m 777 /.ansible
 RUN apk add ansible sshpass
 
 # Tests
-RUN adduser -S jenkins
+RUN adduser -S ansible
+
+USER ansible
