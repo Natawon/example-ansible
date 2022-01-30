@@ -4,5 +4,5 @@
 
   tasks:
     - name: Testing echo
-      debug:
+      local_action: debug
         msg: Hello World
