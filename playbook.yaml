@@ -4,6 +4,5 @@
 
   tasks:
     - name: Testing echo
-      local_action:
-        module: debug
+      debug:
         msg: Hello World
