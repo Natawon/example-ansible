@@ -1,9 +1,9 @@
 ---
 - name: Simple echo test
-  hosts: ExampleTarget
+  hosts: localhost
+  connection: local
 
   tasks:
     - name: Testing echo
-      local_action: 
-        module: debug
+      debug:
         msg: Hello World

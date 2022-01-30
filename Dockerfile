@@ -6,7 +6,3 @@ FROM docker.io/alpine:3
 RUN mkdir -m 777 /.ansible
 
 RUN apk add ansible sshpass
-
-# This part is required if it is desired to execute local_action tasks
-RUN apk add openssh \
-&& rc-update add sshd \
