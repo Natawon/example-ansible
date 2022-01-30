@@ -12,3 +12,5 @@ RUN adduser -S ansible
 
 RUN apk add openrc openssh \
 && rc-update add sshd
+
+EXPOSE 22
