@@ -1,6 +1,7 @@
 ---
 - name: Simple echo test
   hosts: ExampleTarget
+  gather_facts: no
 
   tasks:
     - name: Testing local echo
