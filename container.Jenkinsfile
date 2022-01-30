@@ -11,11 +11,8 @@ pipeline {
     stages {
 
         stage ('echo'){
-
             steps {
-
                 ansiColor('xterm') {
-
                     ansiblePlaybook( 
 
                         playbook: './playbook.yaml',
@@ -24,13 +21,10 @@ pipeline {
                         colorized: true,
 
                     ) 
-
                 }
-
             }
-
         }
-
+        
     }    
 
 }

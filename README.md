@@ -1,6 +1,10 @@
 # jenkins-ansible
 An example of how to use Jenkins and Ansible in conjunction.
 
+# Warning
+As of right now, it's not possible to perform local_actions
+
+# How to do it
 There are 2 possible way to do archive this.
 
 ## **The easy way**
