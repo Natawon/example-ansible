@@ -3,12 +3,16 @@
   hosts: ExampleTarget
   gather_facts: no
 
+  # Role are always executeb before the tasks
+  roles: 
+    - hello-world
+
   tasks:
     - name: Testing local echo
       local_action:
         module: debug
-        msg: Hello world
+        msg: Hello world from the local machine
 
     - name: Testing echo
       debug:
-        msg: Hello World
+        msg: Hello World from the target machine
