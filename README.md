@@ -49,3 +49,14 @@ To test the container with `podman`, use the command:
     podman run -it ansible /bin/sh
 
 If you prefer to use `docker`, the previous commads are still correct, simply change `podman` with `docker`.
+
+License
+-------
+
+MIT
+
+Author Information
+------------------
+
+If you like my work and want to know more, visit my website:
+[www.mattiarubini.com](https://www.mattiarubini.com)
