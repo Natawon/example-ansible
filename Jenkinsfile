@@ -8,7 +8,7 @@ pipeline {
 
     stages {
 
-        stage ('echo'){
+        stage ('Build'){
             steps {
                 ansiColor('xterm') {
 
