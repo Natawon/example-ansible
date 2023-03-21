@@ -1,2 +1,2 @@
 [ExampleTarget]
-server.domain.com
+ansible_host=159.65.129.16 ansible_connection=ssh ansible_port=22 ansible_user=root ansible_ssh_pass=VRThefrog123s 
